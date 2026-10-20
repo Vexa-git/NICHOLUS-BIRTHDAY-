@@ -3,155 +3,227 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Happy Birthday Nicholus - 20 October</title>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+<title>Happy Birthday Nicholus! 🎂👑 - Happy Turns 22</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{min-height:100vh;display:flex;flex-direction:column;align-items:center;background:#000;font-family:'Poppins',sans-serif;overflow-x:hidden;padding:20px 0}
-.bg{position:fixed;inset:0;background:radial-gradient(circle at center,#222 0%,#000 70%);z-index:-1}
-.confetti{position:fixed;top:-20px;font-size:18px;animation:fall linear infinite;z-index:1}
-@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
-.card{position:relative;z-index:10;width:92%;max-width:440px;background:linear-gradient(145deg,rgba(25,25,25,0.95),rgba(0,0,0,0.98));border:2.5px solid gold;border-radius:28px;box-shadow:0 0 50px rgba(255,215,0,0.2),0 25px 80px rgba(0,0,0,0.9);padding:26px 22px 18px;text-align:center;margin-bottom:20px}
-.top-icons{font-size:48px;animation:bounce 1.2s infinite alternate}
-@keyframes bounce{to{transform:translateY(-8px)}}
-.photo-wrap{position:relative;width:155px;height:155px;margin:10px auto}
-.photo-wrap::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(gold,#ffec8b,gold,#b8860b,gold);animation:spin 3s linear infinite}
+body{min-height:100vh;display:flex;flex-direction:column;align-items:center;background:#000;font-family:'Poppins',sans-serif;padding:18px 0 70px 0;overflow-x:hidden}
+.bg{position:fixed;inset:0;background:radial-gradient(circle at 30% 20%,#222 0%,#000 75%);z-index:-1}
+.flower{position:fixed;top:-40px;animation:flowerFall linear forwards;z-index:9999;pointer-events:none}
+@keyframes flowerFall{0%{transform:translateY(-5vh) rotate(0)}100%{transform:translateY(115vh) rotate(720deg)}}
+.cake-drop{position:fixed;top:-30px;animation:fall linear forwards;z-index:9998;pointer-events:none}
+@keyframes fall{to{transform:translateY(110vh) rotate(360deg)}}
+.main{position:relative;z-index:10;width:92%;max-width:460px;text-align:center}
+.top{font-size:58px;animation:bounce 1s infinite alternate}
+@keyframes bounce{to{transform:translateY(-10px)}}
+.title-card{background:linear-gradient(145deg,rgba(25,25,25,0.98),rgba(0,0,0,0.98));border:3px solid gold;border-radius:30px;padding:26px 20px 20px;box-shadow:0 0 70px rgba(255,215,0,0.28)}
+.photo-wrap{position:relative;width:170px;height:170px;margin:12px auto}
+.photo-wrap::before{content:'';position:absolute;inset:-5px;border-radius:50%;background:conic-gradient(gold,#ffec8b,gold,#b8860b,gold);animation:spin 2.5s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.photo{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;border:4px solid black;display:block}
-h1{font-family:'Cinzel',serif;color:gold;font-size:20px;letter-spacing:3px;margin-top:14px}
-h1 span{display:block;color:white;font-size:40px;font-weight:900;letter-spacing:4px;margin-top:2px}
-.date-badge{margin:12px auto;display:inline-block;padding:8px 22px;border:1px solid gold;color:gold;border-radius:30px;font-size:11px;letter-spacing:4px}
-.time{display:flex;gap:10px;justify-content:center;margin-top:18px}
-.box{background:#000;border:1.5px solid gold;min-width:74px;padding:13px 6px;border-radius:16px}
-.box span{font-size:29px;font-weight:800;color:white;display:block}
-.box label{font-size:9px;color:gold;letter-spacing:2px}
-#happy{display:none;margin-top:20px}
-#happy h2{font-family:'Cinzel';color:gold;font-size:32px}
-.btn{margin-top:14px;background:gold;color:black;border:none;padding:12px 26px;border-radius:30px;font-weight:800;font-size:12px;letter-spacing:1px;cursor:pointer;box-shadow:0 5px 15px rgba(255,215,0,0.3);transition:0.2s;display:inline-block;width:100%}
-.btn:active{transform:scale(0.96)}
-.btn-outline{background:transparent;color:gold;border:1.5px solid gold;width:100%;margin-top:10px}
-.wish-section{position:relative;z-index:10;width:92%;max-width:440px;background:rgba(15,15,15,0.95);border:1.5px solid rgba(255,215,0,0.3);border-radius:22px;padding:20px;margin-bottom:20px}
-.wish-section h3{font-family:'Cinzel';color:gold;font-size:16px;letter-spacing:2px;text-align:center;margin-bottom:12px}
-.wish-section input,.wish-section textarea{width:100%;background:#000;border:1px solid rgba(255,215,0,0.4);border-radius:12px;padding:12px 14px;color:white;font-family:'Poppins';font-size:13px;margin-bottom:10px;outline:none}
-.wish-section textarea{height:80px;resize:none}
-.wish-section input:focus,.wish-section textarea:focus{border-color:gold;box-shadow:0 0 10px rgba(255,215,0,0.2)}
-.wishes-list{margin-top:16px;max-height:300px;overflow-y:auto}
-.wish-item{background:rgba(255,215,0,0.07);border-left:3px solid gold;border-radius:10px;padding:10px 12px;margin-bottom:8px;text-align:left}
+.photo{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;border:5px solid #000}
+h1{font-family:'Cinzel',serif;color:gold;font-size:26px;margin-top:14px}
+h1 span{color:white;display:block;font-size:44px;letter-spacing:4px;margin-top:2px}
+.turns{color:gold;font-size:13px;letter-spacing:3px;margin-top:10px;font-weight:700;border:1px solid gold;padding:8px 20px;border-radius:30px;display:inline-block;background:rgba(255,215,0,0.08)}
+.date{margin:12px auto;display:block;color:rgba(255,255,255,0.8);font-size:11px;letter-spacing:3px}
+.cake-box{margin:18px auto;background:rgba(0,0,0,0.6);border:1.5px solid rgba(255,215,0,0.25);border-radius:20px;padding:18px;position:relative;overflow:hidden}
+.cake-visual{position:relative;width:140px;height:110px;margin:0 auto;cursor:pointer;transition:0.5s}
+.cake-top{position:absolute;top:0;left:50%;transform:translateX(-50%);width:120px;height:50px;background:linear-gradient(#FFB6C1,#FF69B4);border-radius:60px 60px 10px 10px;border:3px solid gold;z-index:2;display:flex;align-items:center;justify-content:center;font-size:30px}
+.cake-middle{position:absolute;top:45px;left:50%;transform:translateX(-50%);width:120px;height:40px;background:linear-gradient(#8B4513,#D2691E);border-left:3px solid gold;border-right:3px solid gold;z-index:1}
+.cake-bottom{position:absolute;top:80px;left:50%;transform:translateX(-50%);width:130px;height:25px;background:gold;border-radius:0 0 20px 20px;z-index:1}
+.candle{position:absolute;top:-18px;left:50%;transform:translateX(-50%);font-size:18px;animation:flicker 0.3s infinite alternate;z-index:3}
+@keyframes flicker{to{transform:translateX(-50%) scale(1.1)}}
+.knife{position:absolute;top:50%;left:-60px;font-size:40px;z-index:10;transition:0.8s;transform:rotate(-30deg)}
+.cake-visual.cutting .knife{left:50%;transform:translateX(-50%) rotate(0deg)}
+.cake-visual.cut .cake-top{transform:translateX(-70%) rotate(-15deg);transition:0.8s 0.3s}
+.cake-visual.cut .cake-middle{transform:translateX(-30%) rotate(5deg);transition:0.8s 0.4s}
+.cake-visual.cut .candle{opacity:0;transition:0.3s}
+.slice-effect{position:absolute;top:20px;right:10px;font-size:30px;opacity:0;z-index:5}
+.cake-visual.cut .slice-effect{animation:slicePop 1s forwards 0.8s}
+@keyframes slicePop{0%{opacity:0;transform:translateY(0) scale(0)}50%{opacity:1;transform:translateY(-20px) scale(1.2)}100%{opacity:1;transform:translateY(-10px) scale(1)}}
+#cakeMsg{color:gold;font-size:13px;margin-top:14px;font-weight:600;min-height:18px}
+.btn{width:100%;padding:14px;border:none;border-radius:30px;font-weight:800;font-size:13px;letter-spacing:1px;cursor:pointer;margin-top:11px;transition:0.2s}
+.btn:active{transform:scale(0.97)}
+.btn-gold{background:gold;color:black;box-shadow:0 8px 20px rgba(255,215,0,0.35)}
+.btn-dark{background:transparent;color:gold;border:2px solid gold}
+.wish-section{margin-top:18px;background:rgba(15,15,15,0.95);border:1.5px solid rgba(255,215,0,0.25);border-radius:22px;padding:18px;width:100%}
+.wish-section h3{font-family:'Cinzel';color:gold;font-size:15px;letter-spacing:2px;text-align:center;margin-bottom:12px}
+.wish-section input,.wish-section textarea{width:100%;background:#000;border:1px solid rgba(255,215,0,0.4);border-radius:12px;padding:13px;color:white;font-family:'Poppins';font-size:13px;margin-bottom:10px;outline:none}
+.wish-section textarea{height:85px;resize:none}
+.wishes{max-height:350px;overflow-y:auto;margin-top:14px}
+.wish-item{background:linear-gradient(90deg,rgba(255,215,0,0.08),transparent);border-left:3px solid gold;border-radius:12px;padding:12px;margin-bottom:8px;text-align:left;animation:fadeIn 0.5s}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}
 .wish-item strong{color:gold;font-size:12px}
-.wish-item p{color:#fff;font-size:12px;margin-top:4px;line-height:1.4}
-.footer{position:relative;z-index:10;text-align:center;padding:14px;font-size:10px;letter-spacing:3px;color:rgba(255,215,0,0.7);border-top:1px solid rgba(255,215,0,0.15);width:92%;max-width:440px;margin-top:5px}
-.footer span{color:gold;font-weight:700}
+.wish-item p{color:#fff;font-size:12px;margin-top:4px;word-break:break-word}
+.footer{margin-top:22px;padding:16px;text-align:center;color:rgba(255,215,0,0.6);font-size:10px;letter-spacing:3px;border-top:1px solid rgba(255,215,0,0.15);width:100%}
+.footer span{color:gold;font-weight:800}
+.music-badge{position:fixed;top:10px;right:10px;z-index:100;background:gold;color:black;padding:7px 14px;border-radius:20px;font-size:10px;font-weight:800;cursor:pointer}
+.big22{position:fixed;inset:0;z-index:10000;display:flex;flex-direction:column;align-items:center;justify-content:center;pointer-events:none;opacity:0;transform:scale(0);text-align:center}
+.big22.show{animation:big22Show 2.8s ease-out forwards}
+@keyframes big22Show{0%{transform:scale(0) rotate(-20deg);opacity:0}18%{transform:scale(1.4) rotate(0);opacity:1}45%{transform:scale(1) rotate(0);opacity:1}80%{transform:scale(1) rotate(0);opacity:1}100%{transform:scale(0) rotate(20deg);opacity:0}}
+.big22 .happy{font-family:'Poppins';font-size:22px;font-weight:800;color:white;letter-spacing:6px;text-shadow:0 0 15px gold}
+.big22 .turns22{font-family:'Cinzel',serif;font-size:62px;font-weight:900;color:gold;text-shadow:0 0 40px gold,0 0 100px rgba(255,215,0,0.7);line-height:1;margin:5px 0}
+.marquee-bottom{position:fixed;bottom:0;left:0;width:100%;z-index:1000;background:linear-gradient(90deg,#000 0%,#FFD700 20%,#FFA500 50%,#FFD700 80%,#000 100%);border-top:3px solid white;box-shadow:0 -5px 30px rgba(255,215,0,0.6),0 0 20px gold inset;overflow:hidden;white-space:nowrap;padding:14px 0;cursor:pointer;animation:marqueeGlow 2s infinite alternate}
+@keyframes marqueeGlow{0%{box-shadow:0 -5px 30px rgba(255,215,0,0.6)}100%{box-shadow:0 -5px 50px rgba(255,215,0,0.9)}}
+.marquee{display:inline-block;animation:scroll 32s linear infinite;font-family:'Poppins';font-weight:900;font-size:14px;letter-spacing:2px;color:black;text-shadow:0 1px 0 white}
+@keyframes scroll{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+.marquee span{margin:0 30px;padding:5px 14px;background:rgba(0,0,0,0.12);border-radius:20px}
+.marquee .highlight{background:black;color:gold;padding:6px 18px;border-radius:25px;box-shadow:0 2px 10px rgba(0,0,0,0.5);text-shadow:0 0 10px gold;animation:pulse 1s infinite alternate}
+@keyframes pulse{to{transform:scale(1.05)}}
 </style>
 </head>
 <body>
 <div class="bg"></div>
-<audio id="bdayMusic" loop preload="auto">
-  <source src="birthday.mp3" type="audio/mpeg">
-</audio>
+<div class="music-badge" id="musicBadge" onclick="tryPlay()">🔊 TAP FOR MUSIC</div>
 
-<div class="card">
-  <div class="top-icons">🎂🍾✨</div>
-  <div class="photo-wrap"><img class="photo" src="nicholus.jpg" alt="Nicholus"></div>
-  <h1>HAPPY BIRTHDAY <span>NICHOLUS</span></h1>
-  <div class="date-badge">20 OCTOBER • LUXURY PARTY</div>
-  <div class="time" id="timer">
-    <div class="box"><span id="d">00</span><label>DAYS</label></div>
-    <div class="box"><span id="h">00</span><label>HRS</label></div>
-    <div class="box"><span id="m">00</span><label>MINS</label></div>
-    <div class="box"><span id="s">00</span><label>SECS</label></div>
-  </div>
-  <div id="happy">
-    <h2>🎉 IT'S TODAY! 🎉</h2>
-    <p>Time to cut the cake & pop champagne! 👑</p>
-  </div>
-  <button class="btn" id="musicBtn" onclick="toggleMusic()">🔊 PLAY BIRTHDAY MUSIC</button>
+<div class="big22" id="big22">
+  <div class="happy">HAPPY</div>
+  <div class="turns22">TURNS 22</div>
+  <div style="font-size:50px;margin-top:10px">🎂✨</div>
 </div>
 
-<!-- WISHES SECTION -->
-<div class="wish-section">
-  <h3>💌 SEND YOUR WISHES</h3>
-  <input id="wisherName" type="text" placeholder="Your Name (e.g. Junior Ezed)">
-  <textarea id="wisherMsg" placeholder="Write your birthday wish for Nicholus... 🎂🎉"></textarea>
-  
-  <button class="btn" onclick="sendWishWhatsApp()">💚 SEND WISH VIA WHATSAPP</button>
-  <button class="btn btn-outline" onclick="postWish()">📌 POST ON WISH WALL</button>
+<audio id="music" loop playsinline><source src="birthday.mp3" type="audio/mpeg"></audio>
 
-  <div class="wishes-list" id="wishesList">
-    <div class="wish-item"><strong>Junior Ezed 🎂</strong><p>Happy Birthday bro! More life, more money, more blessings. The King is here! 👑🎉</p></div>
+<div class="main">
+  <div class="top">🎂🍾👑</div>
+  <div class="title-card">
+    <div class="photo-wrap"><img class="photo" src="nicholus.jpg" alt="Nicholus" onerror="this.src='https://via.placeholder.com/170x170/000000/FFD700?text=NICHOLUS'"></div>
+    <h1>HAPPY BIRTHDAY <span>NICHOLUS</span></h1>
+    <div class="turns">CUT THE CAKE TO REVEAL MAGIC! 🎂✨</div>
+    <div class="date">✨ 20 OCTOBER 2026 • BLACK & GOLD PARTY ✨</div>
+    <div class="cake-box">
+      <div class="cake-visual" id="cakeVisual" onclick="cutCake()">
+        <div class="knife">🔪</div>
+        <div class="cake-top"><span class="candle">🕯️</span>🎂</div>
+        <div class="cake-middle"></div>
+        <div class="cake-bottom"></div>
+        <div class="slice-effect">🍰✨</div>
+      </div>
+      <div id="cakeMsg">Tap CUT button to slice the cake! 👆🔪</div>
+      <button class="btn btn-gold" id="cutBtn" onclick="cutCake()">🔪 CUT THE CAKE - HAPPY TURNS 22 🎂</button>
+      <button class="btn btn-dark" onclick="popChampagne()">🍾 POP CHAMPAGNE 🥂</button>
+    </div>
+  </div>
+
+  <div class="wish-section">
+    <h3>💌 WISH THE KING 👑</h3>
+    <input id="name" placeholder="Your Name,(eg Junior Ezed">
+    <textarea id="msg" placeholder="Wish Nicholus happy 22nd birthday..."></textarea>
+    <button class="btn btn-gold" onclick="sendWish()">🌸🎂 SEND WISH + SHOWER</button>
+    <button class="btn btn-dark" onclick="postWish()">📌 ADD TO WISH WALL</button>
+    <div class="wishes" id="wishes"></div>
+  </div>
+
+  <div class="footer">
+    POWERED BY <span>JUNIOR EZED</span> ✨<br>
+    VEXA DEVELOPMENT • KISII 🇰🇪
   </div>
 </div>
 
-<div class="footer">
-  POWERED BY <span>JUNIOR EZED</span> ✨<br>
-  <span style="font-size:8px;opacity:0.5">LUXURY EDITION • 20 OCT 2026</span>
+<div class="marquee-bottom" onclick="openVexa()">
+  <div class="marquee">
+    <span class="highlight">🚀 VEXA DEVELOPMENT 💬 CLICK TO CHAT!</span>
+    <span>💻 WEBSITES</span>
+    <span>📱 APPS</span>
+    <span>🎂 BIRTHDAY SITES</span>
+    <span>🛒 E-COMMERCE</span>
+    <span class="highlight">🔥 TAP HERE TO ORDER A SITE! 👆</span>
+    <span>📍 KISII, KENYA 🇰🇪</span>
+    <span>💛 LUXURY WEBSITES THAT WOW!</span>
+    <span class="highlight">🚀 VEXA - WE BUILD DIGITAL LUXURY ✨</span>
+  </div>
 </div>
 
 <script>
-let musicPlaying=false;
-function toggleMusic(){
-  let audio=document.getElementById('bdayMusic');
-  let btn=document.getElementById('musicBtn');
-  if(!musicPlaying){
-    audio.volume=0.6;
-    audio.play().then(()=>{musicPlaying=true;btn.innerText="🔇 PAUSE MUSIC";confettiBlast();})
-    .catch(()=>{});
-  }else{audio.pause();musicPlaying=false;btn.innerText="🔊 PLAY BIRTHDAY MUSIC";}
+const WISH_NUMBER="+254 758 879107";
+const VEXA_NUMBER="254112843071";
+let musicOn=false;
+const audio=document.getElementById('music');
+function tryPlay(){audio.muted=false; audio.volume=0.6; audio.play().then(()=>{musicOn=true; musicBadge.innerText="🔊 MUSIC: PLAYING";}).catch(()=>{});}
+['click','touchstart'].forEach(e=>{document.addEventListener(e,()=>{if(!musicOn)tryPlay();},{once:true,capture:true})});
+setTimeout(tryPlay,800);
+function openVexa(){window.open(`https://wa.me/${VEXA_NUMBER}?text=Hi%20VEXA!%20I%20saw%20your%20ad%20on%20Nicholus%20birthday%20site%20and%20want%20a%20website%20🎂✨`,'_blank');}
+
+// FEW FLOWERS - ELEGANT
+function dropFlower(){
+  let f=document.createElement("div"); f.className="flower";
+  f.innerText=["🌸","🌹","🌷","💐"][Math.floor(Math.random()*4)];
+  f.style.left=Math.random()*100+"vw"; 
+  f.style.fontSize=(Math.random()*8+18)+"px";
+  f.style.animationDuration=(Math.random()*2+6)+"s"; 
+  document.body.appendChild(f);
+  setTimeout(()=>f.remove(),9000);
 }
-function confettiBlast(){
-  for(let i=0;i<90;i++){
-    let c=document.createElement("div");c.className="confetti";
-    c.innerText=["🎉","🎊","🎈","✨","🍾","🎂","💛","🥂"][Math.floor(Math.random()*8)];
-    c.style.left=Math.random()*100+"vw";c.style.animationDuration=(Math.random()*2+2)+"s";
-    document.body.appendChild(c);setTimeout(()=>c.remove(),4500);
+function dropCake(){
+  let c=document.createElement("div"); c.className="cake-drop";
+  c.innerText=["🎂","🍰"][Math.floor(Math.random()*2)];
+  c.style.left=Math.random()*100+"vw"; 
+  c.style.fontSize=(Math.random()*8+18)+"px";
+  c.style.animationDuration=(Math.random()*2+4)+"s"; 
+  document.body.appendChild(c);
+  setTimeout(()=>c.remove(),7000);
+}
+setInterval(dropFlower, 1200);
+setInterval(dropCake, 2500);
+for(let i=0;i<6;i++) setTimeout(dropFlower,i*600);
+
+function blast(n){for(let i=0;i<n;i++) setTimeout(()=>{Math.random()>0.6?dropFlower():dropCake();},i*40);}
+function show22(){let b=document.getElementById('big22'); b.classList.remove('show'); void b.offsetWidth; b.classList.add('show');}
+
+let cakeCut=false;
+function cutCake(){
+  let visual=document.getElementById('cakeVisual');
+  let btn=document.getElementById('cutBtn');
+  let msg=document.getElementById('cakeMsg');
+  if(cakeCut){msg.innerText="More cake! Happy Turns 22 again! 🎂🍰"; show22(); blast(100); tryPlay(); return;}
+  visual.classList.add('cutting');
+  msg.innerText="🔪 Cutting..."; btn.innerText="✂️ SLICING..."; btn.disabled=true;
+  setTimeout(()=>{
+    visual.classList.remove('cutting'); visual.classList.add('cut');
+    msg.innerText="🎉 WOAH! CAKE CUT! HAPPY TURNS 22! 🎂✨";
+    btn.innerText="✅ CAKE CUT! CUT AGAIN? 🍰"; btn.disabled=false;
+    cakeCut=true; show22(); blast(150);
+    for(let i=0;i<20;i++) setTimeout(dropFlower, i*30);
+    tryPlay();
+  },800);
+}
+function popChampagne(){
+  if(!cakeCut){cutCake(); return;}
+  document.getElementById('cakeMsg').innerText="BOOM! 🍾 HAPPY TURNS 22 CELEBRATION! 🥂";
+  show22(); blast(120); tryPlay();
+}
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
+function loadWishes(){
+  let saved=JSON.parse(localStorage.getItem('nicholus_22_final')||'[]');
+  let container=document.getElementById('wishes'); container.innerHTML='';
+  if(saved.length==0){
+    container.innerHTML='<div class="wish-item"><strong>Junior Ezed 👑</strong><p>Happy Birthday Nicholus! Happy Turns 22 King! Level 22 unlocked! 🎂🌸✨</p></div>';
+  } else {
+    saved.forEach(w=>{
+      let div=document.createElement("div"); div.className="wish-item";
+      div.innerHTML=`<strong>${esc(w.name)} 🎉</strong><p>${esc(w.msg)}</p>`;
+      container.appendChild(div);
+    });
   }
 }
-// Replace with Nicholus's WhatsApp number
-const NICHOLUS_NUMBER = "+254 758 879107"; // <--- CHANGE THIS to his real number e.g. 2547XXXXXXXX
-
-function sendWishWhatsApp(){
-  let name=document.getElementById('wisherName').value.trim() || "Friend";
-  let msg=document.getElementById('wisherMsg').value.trim();
-  if(!msg){alert("Write a wish first! 🎂");return;}
-  let fullMsg=`*Happy Birthday NICHOLUS!* 🎂👑\n\n${msg}\n\n- From ${name}\n\nSent from your luxury birthday website ✨\nPowered by Junior Ezed`;
-  let url=`https://wa.me/${NICHOLUS_NUMBER}?text=${encodeURIComponent(fullMsg)}`;
-  postWish(); // also post on wall
-  window.open(url,'_blank');
-}
+loadWishes();
 function postWish(){
-  let name=document.getElementById('wisherName').value.trim() || "Anonymous";
-  let msg=document.getElementById('wisherMsg').value.trim();
+  let name=document.getElementById('name').value.trim()||"Anonymous";
+  let msg=document.getElementById('msg').value.trim();
+  if(!msg){alert("Write a wish for Nicholus! 🎂");return;}
+  let saved=JSON.parse(localStorage.getItem('nicholus_22_final')||'[]');
+  saved.unshift({name,msg}); localStorage.setItem('nicholus_22_final',JSON.stringify(saved));
+  loadWishes(); blast(80); show22();
+  document.getElementById('msg').value='';
+  document.getElementById('cakeMsg').innerText=`Thanks ${name}! Wish added! 🎉`;
+}
+function sendWish(){
+  let name=document.getElementById('name').value.trim()||"Friend";
+  let msg=document.getElementById('msg').value.trim();
   if(!msg){alert("Write a wish first! 🎂");return;}
-  let list=document.getElementById('wishesList');
-  let div=document.createElement("div");
-  div.className="wish-item";
-  div.innerHTML=`<strong>${escapeHtml(name)} 🎉</strong><p>${escapeHtml(msg)}</p>`;
-  list.prepend(div);
-  // save locally
-  let saved=JSON.parse(localStorage.getItem('nicholus_wishes')||'[]');
-  saved.unshift({name,msg}); localStorage.setItem('nicholus_wishes',JSON.stringify(saved));
-  document.getElementById('wisherMsg').value='';
-  confettiBlast();
+  let full=`*🎂 HAPPY BIRTHDAY NICHOLUS!*\n*HAPPY TURNS 22 TODAY!* 🎉\n\n${msg}\n\n- From ${name}\n_Powered by VEXA ✨_`;
+  postWish();
+  setTimeout(()=>window.open(`https://wa.me/${WISH_NUMBER}?text=${encodeURIComponent(full)}`,'_blank'),700);
 }
-function escapeHtml(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')}
-let bday=new Date(new Date().getFullYear(),9,20);
-if(bday < new Date()) bday=new Date(bday.getFullYear()+1,9,20);
-function upd(){
-  let diff=bday - new Date();
-  if(diff<=0){document.getElementById('timer').style.display='none';document.getElementById('happy').style.display='block';return;}
-  d.innerText=String(Math.floor(diff/86400000)).padStart(2,'0');
-  h.innerText=String(Math.floor(diff/3600000)%24).padStart(2,'0');
-  m.innerText=String(Math.floor(diff/60000)%60).padStart(2,'0');
-  s.innerText=String(Math.floor(diff/1000)%60).padStart(2,'0');
-}
-setInterval(upd,1000); upd();
-for(let i=0;i<40;i++){let c=document.createElement("div");c.className="confetti";c.innerText=["✨","🎊","🎈"][Math.floor(Math.random()*3)];c.style.left=Math.random()*100+"vw";c.style.animationDuration=(Math.random()*3+2.5)+"s";c.style.animationDelay=Math.random()*4+"s";document.body.appendChild(c);}
-// load saved wishes
-let saved=JSON.parse(localStorage.getItem('nicholus_wishes')||'[]');
-saved.forEach(w=>{
-  let div=document.createElement("div");div.className="wish-item";
-  div.innerHTML=`<strong>${escapeHtml(w.name)} 🎉</strong><p>${escapeHtml(w.msg)}</p>`;
-  document.getElementById('wishesList').appendChild(div);
-});
 </script>
 </body>
 </html>
